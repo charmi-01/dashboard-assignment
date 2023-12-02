@@ -84,6 +84,7 @@ const App = () => {
       role: row.role,
     });
   };
+
   const handleSaveEdit = () => {
     const updatedData = data.map((row) =>
       row.id === editingRow ? { ...row, ...editedValues } : row
@@ -93,6 +94,7 @@ const App = () => {
     setEditingRow(null);
     setEditedValues({});
   };
+
   const handleCancelEdit = () => {
     setEditingRow(null);
     setEditedValues({});
@@ -105,9 +107,7 @@ const App = () => {
 
   return (
     <div>
-      <div>
-
-
+      <div className='header'>
         <input
           type="text"
           value={query}
