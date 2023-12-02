@@ -105,24 +105,28 @@ const App = () => {
 
   return (
     <div>
-      <input
-        type="text"
-        value={query}
-        placeholder="Search..."
-        onChange={(e) => setQuery(e.target.value)}
-        className="search-input"
-        onKeyPress={(e) => {
-          if (e.key === 'Enter') {
-            handleSearch(query);
-          }
-        }}
-      />
-      <button onClick={() => handleSearch(query)} className="search-button" >
-        search
-      </button>
-      <button onClick={() => { handleSearch(""); setQuery('') }} className="clear-button">
-        clear
-      </button>
+      <div>
+
+
+        <input
+          type="text"
+          value={query}
+          placeholder="Search..."
+          onChange={(e) => setQuery(e.target.value)}
+          className="search-input"
+          onKeyPress={(e) => {
+            if (e.key === 'Enter') {
+              handleSearch(query);
+            }
+          }}
+        />
+        <button onClick={() => handleSearch(query)} className="search-button" >
+          search
+        </button>
+        <button onClick={() => { handleSearch(""); setQuery('') }} className="clear-button">
+          clear
+        </button>
+      </div>
       <table className="data-table">
         {/* Table headers */}
         <thead>
@@ -153,7 +157,7 @@ const App = () => {
                     type="text"
                     value={editedValues.id}
                     onChange={(e) => setEditedValues({ ...editedValues, id: e.target.value })}
-                    
+
                   />
                 </td>
                 <td className='edit-row-entry'>
@@ -202,14 +206,13 @@ const App = () => {
                 <td>{row.role}</td>
                 <td>
                   <button className="edit-button" onClick={() => handleEditRow(row)}>
-                    <FaRegEdit size={20} />
+                    <FaRegEdit size={15} />
                   </button>
-                  <button className="delete-button" onClick={() => handleDeleteRow(row.id)}><MdDeleteOutline size={20} color='red' /></button>
+                  <button className="delete-button" onClick={() => handleDeleteRow(row.id)}><MdDeleteOutline size={15} color='red' /></button>
                 </td>
               </tr>
             )
           )}
-
         </tbody>
       </table>
       <div className="footer-container">

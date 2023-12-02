@@ -80,23 +80,23 @@ tr:hover {
   width: 90%;
 }
 
+.selected-row{
+  background-color: #f2f2f2;
+}
+
 
 .pagination button {
-  background-color: #9fadb9; /* Light blue color for pagination button */
-  color: white;
+  background-color: #ffffff;
   border: 1px solid #b7c5cf;
-  border-radius: 5px;
-  /* padding: 8px 16px; */
   text-align: center;
   text-decoration: none;
   display: inline-block;
   font-size: 14px;
-  /* margin: 4px 2px; */
   cursor: pointer;
 }
 
 .pagination button:hover:not(.disabled) {
-  background-color: #4f8bc9; /* Darker blue on hover */
+  background-color: #f2f2f2;
 }
 
 .pagination button.disabled {
@@ -106,7 +106,7 @@ tr:hover {
 }
 
 .delete-selected {
-  background-color: #d9534f; /* Red color for delete-selected button */
+  background-color: #d9534f; 
   color: white;
   border: 1px solid #d9534f;
 }
